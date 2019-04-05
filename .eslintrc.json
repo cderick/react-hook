@@ -1,0 +1,27 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "impliedStrict": true,
+          "jsx": true
+      }
+  },
+  "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+  },
+  "extends": "airbnb",
+  "rules": {
+      "allowIndentationTabs": true,
+      "indent": [2, "tab"],
+      "no-tabs": 0,
+      "linebreak-style": ["warn", "windows"],
+      "react/jsx-indent": [2, "tab"],
+      "react/jsx-indent-props": [2, "tab"],
+      "react/jsx-one-expression-per-line": [{ "allow": true}],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}

@@ -1,0 +1,72 @@
+html {
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	@include type-setting(5);
+	margin: $base-line-height * 2 0 !important;
+	font-weight: 700;
+
+	@include media-breakpoint-between(sm, lg) {
+		@include type-setting(4);
+	}
+
+	@include media-breakpoint-down(sm) {
+		@include type-setting(3);
+		margin: $base-line-height 0;
+	}
+}
+
+h2 {
+	@include type-setting(4);
+	margin: $base-line-height 0 !important;
+	font-weight: 700;
+
+	@include media-breakpoint-down(sm) {
+		@include type-setting(2);
+		margin: $base-line-height 0;
+	}
+}
+
+h3 {
+	@include type-setting(2);
+	margin-bottom: $base-line-height !important;
+	margin-top: 0 !important;
+	font-weight: 600;
+
+	@include media-breakpoint-down(sm) {
+		@include type-setting(1);
+		margin: 0px !important;
+	}
+}
+
+h4 {
+	@include type-setting(1);
+	margin: $base-line-height 0 !important;
+	font-weight: 600;
+}
+
+h5 {
+	@include type-setting(0);
+	margin: $base-line-height 0 !important;
+	font-weight: 600;
+}
+
+p, a, span, div, ul, li, ol {
+	@include type-setting(0);
+}
+
+p {
+	margin-bottom: $base-line-height;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+hr {
+	margin-top: calc(#{$base-line-height} - 1px);
+	margin-bottom: $base-line-height;
+}

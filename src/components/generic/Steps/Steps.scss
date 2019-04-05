@@ -1,0 +1,24 @@
+@import '../../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+@import '../../../../stylesheets/_vars.scss';
+
+.steps {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.line {
+    position: absolute;
+    top: calc(50% + 5px);
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: $brand-regent-grey;
+    height: 1px;
+    width: calc(100% - 150px);
+    z-index: -1;
+
+    @include media-breakpoint-down(sm) {
+        width: calc(100% - 100px);
+    }
+}

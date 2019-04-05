@@ -1,0 +1,55 @@
+@import '../../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+@import '../../../../stylesheets/_vars.scss';
+@import '../../../../stylesheets/_mixins.scss';
+
+.step {
+    display: inline-block;
+    padding: $padding $padding-lg;
+
+    @include media-breakpoint-down(sm) {
+        padding: $padding;
+    }
+}
+
+.step:first-of-type {
+    float: left;
+}
+
+.step:last-of-type {
+    float: right;
+}
+
+.circleContainer {
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid $brand-regent-grey;
+    width: calc(#{$step-size} + 4px);
+    height: calc(#{$step-size} + 4px);
+    margin: 10px auto;
+    background-color: white;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: $brand-regent-grey;
+    height: $step-size;
+    width: $step-size;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.active {
+    background: $brand-cerulean;
+}
+
+.number {
+    @include type-setting(1);
+    font-weight: bold;
+}
+
+.text {
+    @include type-setting(0);
+}

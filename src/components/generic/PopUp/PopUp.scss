@@ -1,0 +1,70 @@
+@import '../../../../stylesheets/_vars.scss';
+@import '../../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    z-index: 999999999;
+}
+
+.dropShadow{
+    box-shadow: 0px 0px 13px 8px #888888;
+}
+
+.pop {
+    background-color: white;
+    padding: $padding-lg;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    z-index: 900;
+    max-width: 90vw;
+    overflow-y: auto;
+    min-width: 500px;
+
+    @include media-breakpoint-down(sm) {
+        width: 90vw;
+        min-width: 300px;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    background-color: white !important;
+    border: transparent !important;
+    box-shadow: none;
+    z-index: 100;
+    border-radius: 50%;
+}
+
+.close span {
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.showClose {
+    display: block;
+}
+
+.hideClose {
+    display: none;
+}

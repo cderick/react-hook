@@ -1,0 +1,64 @@
+@import '../../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+@import '../../../../stylesheets/_vars.scss';
+
+.tableWrapper {
+    @include media-breakpoint-down(sm) {
+        overflow-x: scroll;
+        width: 100%;
+    }
+}
+
+.tableWrapper {
+    @include media-breakpoint-down(lg) {
+        overflow-x: scroll;
+        width: 100%;
+    }
+}
+
+.table {
+    border: 1px solid $brand-border;
+}
+
+.pageLink {
+    height: calc(#{$base-line-height} + (#{$padding} * 2));
+    line-height: $base-line-height !important;
+    padding: $padding;
+    box-shadow: none !important;
+    border: 1px solid $brand-border;
+    border-radius: 0px;
+}
+
+.controls {
+    display: inline-block;
+}
+
+.select {
+    height: calc(#{$base-line-height} + (#{$padding} * 2)) !important;
+    line-height: $base-line-height !important;
+    padding: $padding !important;
+    margin-left: $padding;
+}
+
+.th,
+.td {
+    vertical-align: middle !important;
+}
+
+.sortStyle{
+    cursor: pointer;
+}
+
+.iconStyle{
+    width: 1.625em !important;
+    vertical-align: -0.035em !important;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.btn {
+    border: 0px;
+    background-color: transparent;
+    cursor: pointer;
+}

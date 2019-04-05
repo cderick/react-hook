@@ -1,0 +1,280 @@
+$brand-curious-blue: 			#2A86BF;
+$brand-tory-blue: 				#0F66A8;
+$brand-buttercup: 				#F4AC12;
+
+/* Secondary colours ---------- */
+$brand-apple: 				    #34AA40;
+$brand-punch: 					#D63524;
+$brand-cadillac: 				#A64D79;
+$brand-prim: 					#F5E9EF;
+$brand-cerulean: 				#00BFF3;
+$brand-regent-grey: 			#80939E;
+$brand-greyser: 				#D9DEE2;
+$brand-wild-sand: 				#F4F4F4;
+
+/* Font colours ---------- */
+$brand-cod-grey: 				#1A1A1A;
+$brand-dusty-grey:				#949494;
+$brand-alabaster: 				#FAFAFA;
+
+/* Main Colour scheme ------------------------------ */
+/* Base theme colours ---------- */
+$brand-primary: 				$brand-tory-blue;
+$brand-secondary: 				$brand-cadillac;
+$brand-border: 					$brand-greyser;
+
+/* CTA colours ---------- */
+$brand-cta-primary: 			$brand-buttercup;
+$brand-cta-secondary: 		    $brand-greyser;
+$brand-cta-tertiary: 			$brand-wild-sand;
+$brand-cta-success: 			$brand-apple;
+$brand-cta-border:              $brand-regent-grey;
+
+/* Copy colours ---------- */
+$brand-font-dark:				$brand-cod-grey;
+$brand-font-light: 				$brand-alabaster;
+$brand-font-link-light:	    	$brand-greyser;
+$brand-font-link:				$brand-curious-blue;
+$brand-active: 					$brand-apple;
+$brand-link: 					$brand-cerulean;
+
+/* Status colours ---------- */
+$brand-error: 					$brand-punch;
+$brand-success: 				$brand-apple;
+$brand-focus: 					$brand-cerulean;
+$brand-warning:         		$brand-buttercup;
+
+/* Shape colours ---------- */
+$brand-shape-red: 				$brand-punch;
+$brand-shape-blue: 				$brand-curious-blue;
+/* -------------------------------------------------------------------------- */
+
+
+
+/* Type --------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Base font size and line height ---------- */
+$base-font-size:                1rem;
+$base-line-height:              $base-font-size * 1.25;
+
+/* Type scales ---------- */
+/* All values based on REM of 14px */
+$type-settings: (
+  -1: (
+    font-size:                  0.75rem,
+    line-height:                $base-line-height
+  ),
+  0: (
+    font-size:                  1rem,
+    line-height:                $base-line-height
+  ),
+  1: (
+    font-size:                  1.285rem,
+    line-height:                $base-line-height * 2
+  ),
+  2: (
+    font-size:                  1.714rem,
+    line-height:                $base-line-height * 2
+  ),
+  3: (
+    font-size:                  2.142rem,
+    line-height:                $base-line-height * 2
+  ),
+  4: (
+    font-size:                  3.428rem,
+    line-height:                $base-line-height * 3
+  ),
+  5: (
+    font-size:                  5.143rem,
+    line-height:                $base-line-height * 4
+  )
+);
+/* -------------------------------------------------------------------------- */
+
+
+
+/* Breakpoints -------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+/* -------------------------------------------------------------------------- */
+
+
+
+/* Padding ------------------------------------------------------------------ */
+/* -------------------------------------------------------------------------- */
+$padding: 						$base-line-height;
+$padding-lg: 					$base-line-height * 2;
+$padding-xl: 					$base-line-height * 3;
+/* -------------------------------------------------------------------------- */
+
+
+
+/* Header ------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+$h-bg:                          white;
+$h-size:                        122px;
+$h-z-index:                     100;
+
+/* Links ---------- */
+$h-link-padding: 				$padding;
+
+/* Basket ---------- */
+$h-basket-alert-bg: 			$brand-cadillac;
+$h-basket-alert-size: 			20px;
+$h-basket-alert-font-size: 		12px;
+
+/* Mobile ---------- */
+$mob-h-height: 	      			80px;
+$mob-h-link-width:              80px;
+/* -------------------------------------------------------------------------- */
+
+
+
+/* Footer ------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* General ---------- */
+$f-font-color: 		    		$brand-font-light;
+
+/* Topbar ---------- */
+$f-topbar-height:          		$padding;
+$f-topbar-bg: 					$brand-curious-blue;
+
+/* Main body ---------- */
+$f-bg: 							$brand-primary;
+$f-padding: 					$padding;
+$f-list-padding: 				0px;
+$f-telephone-size: 				1.2rem;
+$f-icon-width:					15px;
+
+/* Base ---------- */
+$f-base-bg: 					$f-bg;
+$f-base-padding: 		    	$padding;
+$f-base-box-shadow:				0 100vh 0 100vh $f-base-bg;
+
+/* -------------------------------------------------------------------------- */
+
+
+
+/* Buttons & Forms ---------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Buttons ---------- */
+$btn-height: 					66px;
+$mob-btn-height: 				44px;
+$btn-width: 					208px;
+$btn-border-radius: 			5px;
+$btn-shadow: 					1px 1px 5px rgba(0,0,0,.5);
+$btn-padding:                   0 $base-line-height * 2;
+$btn-border: 					$brand-cod-grey;
+
+/* Radio Butons ----------- */
+$rb-size: 						20px;
+$rb-anim-size:					140px;
+$rb-anim-margin: 				-60px;
+$rb-bg: 						$brand-greyser;
+$rb-border: 					1px solid white;
+
+/* Checkbox ----------- */
+$cb-size: 						20px;
+$cb-anim-size:					140px;
+$cb-anim-margin: 				-60px;
+$cb-bg: 						$brand-greyser;
+$cb-border: 					1px solid white;
+
+/* Forms ---------- */
+$input-height: 					$btn-height;
+$mob-input-height: 				$mob-btn-height;
+$input-padding: 				$base-line-height;
+$input-box-shadow: 				0 0 0 0.1rem rgba($brand-cerulean,.25);
+
+/* Tabs ----------- */
+$tab-border-radius:				$btn-border-radius;
+$tab-color:               		$brand-regent-grey;
+
+/* Dropdown ----------- */
+$dropdown-width: 				100%;
+$dropdown-item-height: 			$base-line-height * 2;
+$dropdown-item-hover: 			$brand-focus;
+
+/* Select ----------- */
+$select-width:					100%;
+$select-height: 				$btn-height;
+$select-border-radius: 			.25rem;
+/* -------------------------------------------------------------------------- */
+
+
+
+/* Index -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Arrows ---------- */
+$arrow-size:                    50px;
+
+/* Index splash ---------- */
+$splash-logo-height-md:  		200px;
+$splash-logo-height-sm:  		100px;
+
+/* Search ---------- */
+$search-btn-padding:            0 $base-line-height;
+$mob-search-btn-width: 			66px;
+$search-open-height: 			70vh;
+
+/* Advanced Search ---------- */
+$advanced-search-height: 		calc(#{$btn-height} + #{$padding}) ;
+$mob-advanced-search-height: 	calc(#{$mob-btn-height} + #{$padding});
+
+/* Scroll icon ---------- */
+$scroll-width: 					50px;
+$scroll-height: 				82px;
+$scroll-color: 					$brand-font-dark;
+$scroll-btn-size: 				10px;
+
+/* Scroll icon mobile ---------- */
+$mob-scroll-width: 				40px;
+$mob-scroll-height: 			60px;
+$mob-scroll-btn-size: 			7px;
+
+/* Prices section ---------- */
+$prices-padding: 				$padding-xl;
+$prices-bg: 					rgba($brand-tory-blue, .5);
+$prices-bg-img: 				url('https://images.pexels.com/photos/34088/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb');
+$prices-arrow-size: 			$arrow-size;
+
+/* Testimonials section ---------- */
+$testimonials-padding:          $padding-xl;
+$testimonials-bg:               white;
+$testimonials-bg-img:           url('https://d30y9cdsu7xlg0.cloudfront.net/png/81720-200.png');
+$testimonials-hr-height:        5px;
+$testimonials-hr-bg:            $brand-punch;
+$testimonials-arrow-size:       $arrow-size;
+
+/* Why choose section ---------- */
+$whychoose-height:              calc(100vh - #{$h-size});
+$mob-whychoose-height:          calc(100vh - #{$mob-h-height});
+$whychoose-bg:                  rgba($brand-cadillac, .5);
+$whychoose-padding:             $padding-xl;
+$whychoose-dl-width:            450px;
+$whychoose-dl-border:           2px solid $brand-font-light;
+$whychoose-dl-border-radius:    10px;
+$whychoose-dl-padding:          $padding;
+/* -------------------------------------------------------------------------- */
+
+
+
+/* Map Page ----------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Steps ---------- */
+$step-size:						35px;
+
+/* Steps Container ---------- */
+$steps-padding-bottom: 			calc(#{$btn-height} + #{$padding});
+$mob-steps-padding-bottom:      calc((#{$btn-height} * 2) + #{$padding});
+
+/* Step 1 ---------- */
+$step-1-icon: 					80px;
+$mob-step-1-icon: 				65px;
+/* -------------------------------------------------------------------------- */

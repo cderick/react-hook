@@ -1,0 +1,58 @@
+@import '../../../../stylesheets/_vars.scss';
+
+.tab {
+    background-color: $tab-color;
+    color: $brand-font-light;
+    padding: $padding;
+    display: inline-block;
+    border: 1px solid $brand-border;
+    border-bottom: 0px !important;
+    border-top-left-radius: $tab-border-radius;
+    border-top-right-radius: $tab-border-radius;
+}
+
+.tab a {
+    padding: $padding;
+    display: block;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab a:hover {
+    text-decoration: none;
+}
+
+.tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabContent {
+    padding: $padding;
+    border: 1px solid $brand-border;
+    margin-bottom: $padding-lg;
+}
+
+.tabContent li {
+    width: 100%;
+    border: 0px;
+}
+
+.active {
+    background-color: white !important;
+    position: relative;
+    border-bottom-color: white !important;
+    color: $brand-font-dark !important;
+}
+
+.activeBorder {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+}

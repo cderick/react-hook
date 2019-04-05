@@ -1,0 +1,91 @@
+@import '../../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+@import '../../../../stylesheets/_vars.scss';
+
+.inputWrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.input {
+    border: 1px solid $brand-border;
+    border-radius: 5px;
+    padding: $padding;
+    width: 100% !important;
+
+    &:active,
+    &:focus {
+        box-shadow: 0px 0px 10px 0px rgba($brand-focus, .5);
+        outline: none;
+        border-color: $brand-focus;
+    }
+}
+
+.error {
+    border-color: $brand-error !important;
+    box-shadow: 0px 0px 10px 0px rgba($brand-error, .5) !important;
+}
+
+.success {
+    border-color: $brand-success !important;
+    box-shadow: 0px 0px 10px 0px rgba($brand-success, .5) !important;
+}
+
+.icon {
+    position: absolute;
+    right: $padding;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.especialIcon {
+    position: absolute;
+    right: $padding;
+    top: 33%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.decreaseIcon {
+    position: absolute;
+    right: $padding;
+    top: 66%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.iconError {
+    color: $brand-error;
+}
+
+.iconSuccess {
+    color: $brand-success;
+}
+
+.addon {
+    box-shadow: none;
+    border: 0px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: $btn-height;
+    background-color: $brand-greyser;
+    padding: 0 $padding;
+    border-top-right-radius: $btn-border-radius;
+    border-bottom-right-radius: $btn-border-radius;
+    cursor: pointer;
+    z-index: 10;
+
+    @include media-breakpoint-down(sm) {
+        height: $mob-btn-height;
+    }
+}
+
+.addon span {
+    line-height: $btn-height;
+
+    @include media-breakpoint-down(sm) {
+        line-height: $mob-btn-height;
+    }
+}

@@ -1,0 +1,22 @@
+@import '../../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+@import '../../../../stylesheets/_vars.scss';
+
+.select {
+    border: 1px solid $brand-border;
+    border-radius: $select-border-radius;
+
+    height: $btn-height;
+    padding-left: $padding;
+    padding-right: $padding;
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+        height: $mob-btn-height;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .select {
+        padding-right: 0px;
+    }
+}

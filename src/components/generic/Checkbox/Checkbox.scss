@@ -1,0 +1,98 @@
+@import '../../../../stylesheets/_vars.scss';
+
+.label {
+    width: auto;
+    cursor: pointer;
+}
+
+.checkbox {
+    float: left;
+    margin-right: $padding;
+}
+
+.active {
+    color: $brand-success;
+}
+
+@keyframes click-wave {
+    0% {
+        z-index: -1;
+        width: 0px;
+        height: 0px;
+        opacity: 0.35;
+    }
+    100% {
+        z-index: -1;
+        width: $cb-anim-size;
+        height: $cb-anim-size;
+        opacity: 0;
+    }
+}
+  
+.optionInput {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+    height: $cb-size;
+    width: $cb-size;
+    transition: all 0.2s ease-out 0s;
+    background: $cb-bg;
+    border: $cb-border;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+  
+.optionInput:hover {
+    background: darken($cb-bg, 10%);
+}
+  
+.optionInput:checked {
+    background: $brand-success;
+}
+  
+.optionInput:checked::before {
+    height: $cb-size;
+    width: $cb-size;
+    position: absolute;
+    content: '✔';
+    font-size: 10px;
+    display: inline-block;
+    text-align: center;
+    line-height: 18px;
+    margin-left: -1px;
+}
+
+.animation {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: $brand-success;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    margin-left: -0.5em;
+}
+
+.checkWrapper {
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+    margin-right: 0.5rem;
+    margin-bottom: -5px;
+}
+
+.animOff {
+    display: none !important;
+}
+
+.animOn {
+    display: block !important;
+}

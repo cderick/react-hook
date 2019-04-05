@@ -1,0 +1,30 @@
+@keyframes scrollDown {
+    0% {
+        top: 10px;
+        opacity: 1;
+    }
+    100% {
+        top: 30px;
+        opacity: 0;
+    }
+}
+
+@keyframes scrollDownMob {
+    0% {
+        top: 5px;
+        opacity: 1;
+    }
+    100% {
+        top: 15px;
+        opacity: 0;
+    }
+}
+
+.scroll__btn--animate {
+	animation: 2s ease-out 0s infinite scrollDown;
+
+	@include media-breakpoint-down(sm) {
+		animation: 2s ease-out 0s infinite scrollDownMob;
+	}
+}
+/* -------------------------------------------------------------------------- */

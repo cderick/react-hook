@@ -1,0 +1,26 @@
+@import '../../../../stylesheets/_vars.scss';
+
+.btn {
+    width: calc(#{$btn-height} * 2);
+    max-width: 100% !important;
+}
+
+.chevron {
+    position: absolute;
+    right: $padding;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $brand-font-light;
+}
+
+.dropdown {
+    display: none;
+    width: 100%;
+}
+
+.dropdownActive {
+    display: block;
+    position: absolute;
+    z-index: 6666666;
+    margin-top: -15px;
+}

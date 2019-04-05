@@ -1,0 +1,71 @@
+@import '../../../../stylesheets/_vars.scss';
+@import '../../../../stylesheets/_mixins.scss';
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.feedback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    background-color: white;
+    padding: $padding;
+    text-align: center;
+}
+
+.feedbackContent {
+    display: inline-block;
+}
+
+#feedbackClose {
+    position: absolute;
+    right: $padding;
+    top: $padding;
+    height: $padding;
+    width: $padding;
+    font-size: $padding;
+    background-color: transparent;
+    border: 0px transparent;
+    box-shadow: none !important;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.title {
+    display: inline-block;
+    @include type-setting(2);
+    padding-right: $padding;
+}
+
+.neutral {
+    @include font-bg-color($brand-greyser);
+}
+
+.alert {
+    @include font-bg-color($brand-primary);
+}
+
+.success {
+    @include font-bg-color($brand-success);
+
+    .close {
+        color: $brand-font-light;
+    }
+}
+
+.warning {
+    @include font-bg-color($brand-punch);
+
+    .close {
+        color: $brand-font-light;
+    }
+}

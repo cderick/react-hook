@@ -1,0 +1,15 @@
+@import "../../../../stylesheets/_vars.scss";
+
+.dropdown {
+    width: 100%;   
+}
+
+.dropdownItem {
+    height: $dropdown-item-height;
+    cursor: pointer;
+}
+
+.dropdownItem:hover {
+    background-color: $dropdown-item-hover;
+    color: $brand-font-light;
+}

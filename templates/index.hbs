@@ -10,14 +10,10 @@
 		{{> partials/header }}
 		{{/if}}
         <div id="root">
-			<div class="root__placeholder">
-				<div class="newFortest">
-					<h2 class="textCenters">Loading&nbsp;</h2>
-				</div>
-			</div>
         </div>
 		{{#if htmlWebpackPlugin.options.dev}}
 		{{> partials/whychoose }}
+		<div class="newFix">&nbsp;</div>
 		{{> partials/footer }}
 		{{/if}}
     </body>

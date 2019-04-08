@@ -19,11 +19,11 @@ class HomePage extends React.Component {
 
 		return (
 			<div>
-				<div className={`container-fluid ${s.splash}`}>
+				<div className="container">
 					<div className="row">
-						<div className={`container ${s.splash__content} text-center`}>
+						<div className="container text-center">
 							<div className={this.state.content ? `${s.content} ${s.contentOpen}` : `${s.content} ${s.contentClosed}`}>
-								<p>{advancedSearchText}</p>
+								<p className="p-5">{advancedSearchText}</p>
 							</div>
 						</div>
 					</div>

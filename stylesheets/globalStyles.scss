@@ -32,6 +32,11 @@ body, html {
 .root__placeholder{
 	height: 70vh !important;
 }
+
+.newFix {
+	height: 30vh !important;
+}
+
 .newFortest {
 	margin-left: auto;
 	margin-right: auto; 
@@ -94,103 +99,12 @@ header {
     }
 }
 
-.navbar,
-.navbar-brand {
-	@include media-breakpoint-down(md) {
-		padding: 0px !important;
-	}
-}
-
-.navbar-right {
-	position: absolute;
-	right: 0px;
-
-	@include media-breakpoint-down(md) {
-		top: 0px;
-		right: $mob-h-link-width;
-		flex-direction: row !important;
-	}
-}
-
-.navbar-toggler {
-	@include media-breakpoint-down(md) {
-		width: $mob-h-link-width;
-		height: $mob-h-height;
-		border: 0px !important;
-	}
-
-	@include media-breakpoint-between(sm, md) {
-		border-right: 1px solid $brand-border !important;
-	}
-}
-
-.nav-link {
-	display: inline-block;
-	text-decoration: none;
-	color: inherit !important;
-	padding: $h-link-padding !important;
-
-	@include media-breakpoint-up(lg) {
-		display: flex;
-		align-items: center;
-		height: 100px;
-		border-bottom: 5px solid transparent;
-	}
-
-	@include media-breakpoint-down(lg) {
-		text-align: center;
-		width: 100%;
-	}
-}
-
-.nav-link:hover {
-	text-decoration: none !important;
-	
-    @include media-breakpoint-up(lg) {
-        border-bottom: 5px solid $brand-primary;
-        transition: border ease-in-out .2s;
-    }
-
-    @include media-breakpoint-down(lg) {
-		width: 100%;
-	}
-}
-
-.nav-link:hover .nav-link__text {
-    color: $brand-font-link !important;
-}
-
-.nav-link:hover .h-icon {
-    @include media-breakpoint-up(lg) {    
-        transform: scale(1.2);
-    }
-}
-
-.nav-link .h-icon {
-    @include media-breakpoint-up(lg) {
-		transition: transform ease-in-out .2s;
-	}
-}
-
-
-.navbar-collapse {
-	@include media-breakpoint-down(md) {
-		border-top: 1px solid $brand-border;
-	}
-}
-
 .h-logo {
 	@include media-breakpoint-down(md) {
 		// height: $mob-h-height;
 		// max-width: calc(100vw - (#{$mob-h-link-width} * 3));
 		max-width: 75px;
 	}
-}
-
-.navbar-right {
-	position: absolute !important;
-	top: 50% !important;
-	transform: translateY(-50%) !important;
 }
 
 .h-login {

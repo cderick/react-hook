@@ -1,50 +1,44 @@
-/* global $ */
 import React from 'react';
-import PropTypes from 'prop-types';
+/* import PropTypes from 'prop-types'; */
 import s from './HomePage.scss';
 
 class HomePage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            content: true,
-        };
-    }
+	constructor(props) {
+		super(props);
+		this.state = {
+			content: true,
+		};
+	}
 
-    componentDidMount() {
-        //init();
-    }
+	componentDidMount() {
+		// init();
+	}
 
-    render() {
-        let advancedSearchText = 'Arroz';
-        if (1 === 2) {
-            advancedSearchText = 'Feijao';
-        } else {
-            advancedSearchText = 'Macarrao';
-        }
+	render() {
+		const advancedSearchText = 'Arroz';
 
-        return (
-            <div>
-                <div className={`container-fluid ${s.splash}`}>
-                    <div className="row">
-                        <div className={`container ${s.splash__content} text-center`}>
-                            <div className={this.state.content ? `${s.content} ${s.contentOpen}`: `${s.content} ${s.contentClosed}`}>
-                                <p>{advancedSearchText}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+		return (
+			<div>
+				<div className={`container-fluid ${s.splash}`}>
+					<div className="row">
+						<div className={`container ${s.splash__content} text-center`}>
+							<div className={this.state.content ? `${s.content} ${s.contentOpen}` : `${s.content} ${s.contentClosed}`}>
+								<p>{advancedSearchText}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
-// HomePage.propTypes = {
-//     dictionary: PropTypes.objectOf(PropTypes.string),
-// };
+/* HomePage.propTypes = {
+    dictionary: PropTypes.objectOf(PropTypes.string),
+};
 
-// HomePage.defaultProps = {
-//     dictionary: {},
-// };
+HomePage.defaultProps = {
+    dictionary: {},
+}; */
 
 export default HomePage;

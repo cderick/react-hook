@@ -2,7 +2,7 @@ import { combineReducers } from 'redux-immutable';
 import gituserReducer from './gituser';
 
 const rootReducer = combineReducers({
-    gituser: gituserReducer,
+	gituser: gituserReducer,
 });
 
 export default rootReducer;

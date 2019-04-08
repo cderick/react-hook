@@ -18,10 +18,18 @@
       "allowIndentationTabs": true,
       "indent": [2, "tab"],
       "no-tabs": 0,
+      "class-methods-use-this": 0,
+      "no-mixed-operators": 0,
+      "react/button-has-type": 0,
+      "no-script-url": 0,
+      "prefer-destructuring": ["error", {"object": true, "array": false}],
+      "no-nested-ternary": 0,
       "linebreak-style": ["warn", "windows"],
       "react/jsx-indent": [2, "tab"],
+      "jsx-a11y/anchor-is-valid": 0,
       "react/jsx-indent-props": [2, "tab"],
       "react/jsx-one-expression-per-line": [{ "allow": true}],
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/destructuring-assignment": ["enabled", "never"]
   }
 }

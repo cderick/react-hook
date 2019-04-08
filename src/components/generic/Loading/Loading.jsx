@@ -8,22 +8,25 @@ import s from './Loading.scss';
  * Therefore, it should cover the whole viewport.
  */
 const Loading = props => (
-    <div id={props.id ? props.id : 'regularSpinner'} className={`${s.loading} ${props.className}`}>
-        <div className={`${s.loadingContent} text-center`}>
-            <i className="fa fa-spinner fa-spin" />
-            <br />
-            <br />
-            <p>{props.message}</p>
-        </div>
-    </div>);
+	<div id={props.id ? props.id : 'regularSpinner'} className={`${s.loading} ${props.className}`}>
+		<div className={`${s.loadingContent} text-center`}>
+			<i className="fa fa-spinner fa-spin" />
+			<br />
+			<br />
+			<p>{props.message}</p>
+		</div>
+	</div>
+);
 
 Loading.propTypes = {
-    message: PropTypes.string,
-    className: PropTypes.string,
+	message: PropTypes.string,
+	className: PropTypes.string,
+	id: PropTypes.string,
 };
 
 Loading.defaultProps = {
-    message: '',
-    className: null,
+	message: '',
+	className: null,
+	id: '',
 };
 export default Loading;

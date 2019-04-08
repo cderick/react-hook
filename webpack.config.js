@@ -50,6 +50,7 @@ const common = {
 				exclude: /node_modules/
             },
 			{
+                type: 'javascript/auto',
                 test: /\.json$/,
                 use: 'json-loader',
 			},

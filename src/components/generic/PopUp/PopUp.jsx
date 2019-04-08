@@ -19,48 +19,43 @@ import s from './PopUp.scss';
  * @param {function} [props.onClose = null]
  */
 const PopUp = (props) => {
-    let showClose = '';
+	const showClose = props.showClose ? s.showClose : s.hideClose;
 
-    if (props.showClose) {
-        showClose = s.showClose;
-    } else {
-        showClose = s.hideClose;
-    }
-    return (
-        <div className={s.wrapper}>
-            <div className={`${s.pop} ${props.className === 'dropShadow' ? s.dropShadow : ''} ${props.popUpClass}`}>
-                <Button
-                    className={`${s.close} ${showClose}`}
-                    onClick={props.onClose}
-                >
-                    <i className="fa fa-times-circle" />
-                </Button>
-                <div className={`row ${props.className}`}>
-                    <div className="col">
-                        {props.title ? <h2>{props.title}</h2> : null}
-                        {props.children}
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<div className={s.wrapper}>
+			<div className={`${s.pop} ${props.className === 'dropShadow' ? s.dropShadow : ''} ${props.popUpClass}`}>
+				<Button
+					className={`${s.close} ${showClose}`}
+					onClick={props.onClose}
+				>
+					<i className="fa fa-times-circle" />
+				</Button>
+				<div className={`row ${props.className}`}>
+					<div className="col">
+						{props.title ? <h2>{props.title}</h2> : null}
+						{props.children}
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 PopUp.propTypes = {
-    children: PropTypes.node.isRequired,
-    onClose: PropTypes.func,
-    title: PropTypes.string,
-    className: PropTypes.string,
-    popUpClass: PropTypes.string,
-    showClose: PropTypes.bool,
+	children: PropTypes.node.isRequired,
+	onClose: PropTypes.func,
+	title: PropTypes.string,
+	className: PropTypes.string,
+	popUpClass: PropTypes.string,
+	showClose: PropTypes.bool,
 };
 
 PopUp.defaultProps = {
-    onClose: null,
-    title: '',
-    className: null,
-    popUpClass: null,
-    showClose: true,
+	onClose: null,
+	title: '',
+	className: null,
+	popUpClass: null,
+	showClose: true,
 };
 
 export default PopUp;

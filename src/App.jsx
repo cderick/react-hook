@@ -9,19 +9,21 @@ import { Provider } from 'react-redux';
 import '../node_modules/bootstrap/dist/js/bootstrap';
 import '../stylesheets/globalStyles.scss';
 
-import reducer from './reducers/';
+import reducer from './reducers';
 import Routes from './routes';
 
 let store = null;
 
 if (process.env.NODE_ENV && process.env.NODE_ENV === 'production') {
-    store = createStore(reducer, applyMiddleware(ReduxPromise));
+	store = createStore(reducer, applyMiddleware(ReduxPromise));
 } else {
-    const MIDDLEWARE = applyMiddleware(ReduxPromise);
-    const DEV_TOOLS = window.devToolsExtension ? window.devToolsExtension() : f => f;
-    store = createStore(reducer, compose(MIDDLEWARE, DEV_TOOLS));
+	const MIDDLEWARE = applyMiddleware(ReduxPromise);
+	const DEV_TOOLS = window.devToolsExtension ? window.devToolsExtension() : f => f;
+	store = createStore(reducer, compose(MIDDLEWARE, DEV_TOOLS));
 }
 
-ReactDOM.render(<Provider store={store}>
-    <Routes />
-</Provider>, document.getElementById('root'));
+ReactDOM.render(
+	<Provider store={store}>
+		<Routes />
+	</Provider>, document.getElementById('root'),
+);

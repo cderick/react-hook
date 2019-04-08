@@ -5,27 +5,29 @@ import Button from '../Button/Button';
 import s from './PopUpSelect.scss';
 
 const PopUpSelect = props => (
-    <div className={s.select}>
-        <PopUp onClose={props.cancel} className={props.className}>
-            {props.title ? <h3>{props.title}</h3> : null}
-            {props.children}
-            <div className={s.buttons}>
-                <Button className={s.cancel} onClick={props.cancel} secondary>Cancel</Button>
-                <Button className={s.accept} onClick={props.accept} primary>Accept</Button>
-            </div>
-        </PopUp>
-    </div>
+	<div className={s.select}>
+		<PopUp onClose={props.cancel} className={props.className}>
+			{props.title ? <h3>{props.title}</h3> : null}
+			{props.children}
+			<div className={s.buttons}>
+				<Button className={s.cancel} onClick={props.cancel} secondary>Cancel</Button>
+				<Button className={s.accept} onClick={props.accept} primary>Accept</Button>
+			</div>
+		</PopUp>
+	</div>
 );
 
 PopUpSelect.propTypes = {
-    cancel: PropTypes.func.isRequired,
-    accept: PropTypes.func.isRequired,
-    children: PropTypes.node.isRequired,
-    title: PropTypes.string,
+	cancel: PropTypes.func.isRequired,
+	accept: PropTypes.func.isRequired,
+	className: PropTypes.string,
+	children: PropTypes.node.isRequired,
+	title: PropTypes.string,
 };
 
 PopUpSelect.defaultProps = {
-    title: '',
+	title: '',
+	className: '',
 };
 
 export default PopUpSelect;

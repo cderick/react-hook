@@ -5,21 +5,23 @@ import ReduxPromise from 'redux-promise';
 import { Provider } from 'react-redux';
 import '../node_modules/bootstrap/dist/js/bootstrap';
 import '../stylesheets/globalStyles.scss';
-import '../helpers/helpers.js';
+import '../lib/helpers';
 
-import reducer from './reducers/';
+import reducer from './reducers';
 import HomePageContainer from './containers/HomePageContainer/HomePageContainer';
 
 let store = null;
 
 if (process.env.NODE_ENV && process.env.NODE_ENV === 'production') {
-    store = createStore(reducer, applyMiddleware(ReduxPromise));
+	store = createStore(reducer, applyMiddleware(ReduxPromise));
 } else {
-    const MIDDLEWARE = applyMiddleware(ReduxPromise);
-    const DEV_TOOLS = window.devToolsExtension ? window.devToolsExtension() : f => f;
-    store = createStore(reducer, compose(MIDDLEWARE, DEV_TOOLS));
+	const MIDDLEWARE = applyMiddleware(ReduxPromise);
+	const DEV_TOOLS = window.devToolsExtension ? window.devToolsExtension() : f => f;
+	store = createStore(reducer, compose(MIDDLEWARE, DEV_TOOLS));
 }
 
-ReactDOM.render(<Provider store={store}>
-    <HomePageContainer />
-</Provider>, document.getElementById('root'));
+ReactDOM.render(
+	<Provider store={store}>
+		<HomePageContainer />
+	</Provider>, document.getElementById('root'),
+);

@@ -10,32 +10,32 @@ import s from './Steps.scss';
  */
 
 const Steps = props => (
-    <div className="d-block mx-auto">
-        <div
-            className={s.steps}
-            onChange={props.onChange}
-        >
-            {props.children.map(step => (
-                <Step
-                    key={step.props.number}
-                    number={step.props.number}
-                    text={step.props.text}
-                    active={props.active}
-                />
-            ))}
-            <hr className={s.line} />
-        </div>
-    </div>
+	<div className="d-block mx-auto">
+		<div
+			className={s.steps}
+			onChange={props.onChange}
+		>
+			{props.children.map(step => (
+				<Step
+					key={step.props.number}
+					number={step.props.number}
+					text={step.props.text}
+					active={props.active}
+				/>
+			))}
+			<hr className={s.line} />
+		</div>
+	</div>
 );
 
 Steps.propTypes = {
-    onChange: PropTypes.func,
-    children: PropTypes.node.isRequired,
-    active: PropTypes.number.isRequired,
+	onChange: PropTypes.func,
+	children: PropTypes.node.isRequired,
+	active: PropTypes.number.isRequired,
 };
 
 Steps.defaultProps = {
-    onChange: null,
+	onChange: null,
 };
 
 export default Steps;

@@ -13,38 +13,38 @@ import s from './Select.scss';
  * - children : option elements
  */
 const Select = props => (
-    <select
-        className={`${s.select} ${props.className}`}
-        multiple={props.multiple}
-        onChange={props.onChange}
-        value={props.value}
-    >
-        <option value="default_value" disabled hidden>{props.defaultMessage}</option>
-        {props.children.map(option => (
-            <option
-                key={option}
-                value={option}
-            >
-                {option}
-            </option>
-        ))}
-    </select>
+	<select
+		className={`${s.select} ${props.className}`}
+		multiple={props.multiple}
+		onChange={props.onChange}
+		value={props.value}
+	>
+		<option value="default_value" disabled hidden>{props.defaultMessage}</option>
+		{props.children.map(option => (
+			<option
+				key={option}
+				value={option}
+			>
+				{option}
+			</option>
+		))}
+	</select>
 );
 
 Select.propTypes = {
-    className: PropTypes.string,
-    multiple: PropTypes.bool,
-    children: PropTypes.node.isRequired,
-    defaultMessage: PropTypes.string,
-    onChange: PropTypes.func.isRequired,
-    value: PropTypes.string,
+	className: PropTypes.string,
+	multiple: PropTypes.bool,
+	children: PropTypes.node.isRequired,
+	defaultMessage: PropTypes.string,
+	onChange: PropTypes.func.isRequired,
+	value: PropTypes.string,
 };
 
 Select.defaultProps = {
-    className: '',
-    multiple: false,
-    defaultMessage: 'Please select...',
-    value: 'default_value',
+	className: '',
+	multiple: false,
+	defaultMessage: 'Please select...',
+	value: 'default_value',
 };
 
 export default Select;

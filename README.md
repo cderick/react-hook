@@ -6,7 +6,7 @@ Include:
 
 * Lifecycle example.
 * Router Example.
-* Axios Example redux - reducer example (Not working due missing API CORS)
+* Axios Example + Redux/reducer example (Not working due missing API with CORS)
 * Handlebars Template.
 
 ```sh

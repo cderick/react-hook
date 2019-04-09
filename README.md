@@ -23,4 +23,4 @@ npm run or yarn lint
 npm run or yarn build
 ```
 
-# Enjoy ❄🌠🌌🥼
+# Enjoy ❄🌠🌌

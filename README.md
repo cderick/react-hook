@@ -2,6 +2,13 @@
 
 This boilerplate could help you start to play React Hooks APIs with Hot Reload.
 
+Include:
+
+* Lifecycle example.
+* Router Example.
+* Axios Example redux - reducer example (Not working due missing API CORS)
+* Handlebars Template.
+
 ```sh
 yarn or npm install
 yarn or npm start
@@ -16,4 +23,4 @@ npm run or yarn lint
 npm run or yarn build
 ```
 
-# Enjoy 🎅🎄🔥
+# Enjoy ❄🌠🌌🥼
